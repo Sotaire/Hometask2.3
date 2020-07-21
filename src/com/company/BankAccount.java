@@ -3,7 +3,6 @@ package com.company;
 public class BankAccount {
 
     double amount = 0.0;
-    double withdrawal;
 
     public double getAmount() {
         return amount;
@@ -14,9 +13,8 @@ public class BankAccount {
     }
 
     public void withDraw(int sum) throws LimitException {
-        withdrawal =sum;
-        if (amount < sum) {
-            throw new LimitException("Недостаточно средств",amount);
+        if (amount < sum) {                                             //создаем и предупреждаем о возможном исключении
+            throw new LimitException("Недостаточно средств",amount);        //которое может возникнуть при недостатке на счете суммы
         }
         amount -= sum;
     }

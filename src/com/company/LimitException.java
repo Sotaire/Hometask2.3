@@ -9,8 +9,4 @@ public class LimitException extends Exception {
         this.remainingAmount = remainingAmount;
     }
 
-    public double getRemainingAmount() {
-        return remainingAmount;
-    }
-
 }

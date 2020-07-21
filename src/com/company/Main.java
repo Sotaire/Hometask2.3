@@ -10,13 +10,13 @@ public class Main {
 
         while (true){
             try {
-                account.withDraw(4000);
+                account.withDraw(4000);          // Пытаемся снять со счета деньги
                 System.out.println(account.getAmount());
             } catch (LimitException e) {
-                System.out.println(e.getMessage());
                 try {
-                    account.withDraw((int)account.getAmount());
-                } catch (LimitException e1) {
+                    System.out.println(e.getMessage());
+                    account.withDraw((int)account.getAmount());       // Снимаем со счета то,что есть,
+                } catch (LimitException e1) {                         // если запрашиваемая сумма превышает сумму на счете
                 }
                 break;
             }
