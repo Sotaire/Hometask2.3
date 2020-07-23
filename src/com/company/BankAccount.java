@@ -2,7 +2,7 @@ package com.company;
 
 public class BankAccount {
 
-    double amount = 0.0;
+    double amount;
 
     public double getAmount() {
         return amount;
